@@ -14,11 +14,11 @@ const App = () => (
     <Dokumentace />
     <Knihovny />
     <Editory />
-    <SvgExample />
     <h2>Zdrojové kódy</h2>
     <p>
       Projekt <a href="https://github.com/FilipJirsak/daweb-svg">daweb-svg</a> na GitHubu.
     </p>
+    <SvgExample />
   </div>
 );
 
