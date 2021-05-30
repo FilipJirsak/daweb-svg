@@ -1,0 +1,101 @@
+.circle {
+  fill: red;
+  fill-opacity: 0.7;
+}
+
+.circle:hover {
+  r: 7;
+  transition: r 1s;
+}
+
+.rect {
+  fill: blue;
+  stroke: silver;
+  stroke-width: 1;
+}
+
+.rect:hover {
+  animation-name: rotate;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.polygon {
+  fill: lime;
+  stroke: black;
+  stroke-width: 0.1;
+  stroke-dasharray: 1 2;
+  animation-name: stroke-dashoffset;
+  animation-timing-function: linear;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+rect.text {
+  fill: lightskyblue;
+  cursor: pointer;
+}
+
+rect.text.active {
+  fill: gold;
+}
+
+text.text {
+  font: 6pt "Open Sans";
+  text-anchor: middle;
+  pointer-events: none;
+}
+
+.line {
+  stroke: violet;
+  stroke-width: 1;
+}
+
+.circle-on-line {
+  fill: chocolate;
+  animation-name: circle-on-line;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.path {
+  stroke: coral;
+  fill: none;
+}
+
+.circle-on-path {
+  fill: crimson;
+}
+
+@keyframes rotate {
+  from {
+    transform-origin: 25px 10px;
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform-origin: 25px 10px;
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes stroke-dashoffset {
+  from {
+    stroke-dashoffset: 0;
+  }
+
+  to {
+    stroke-dashoffset: 3;
+  }
+}
+
+@keyframes circle-on-line {
+  from {
+    transform: translate(2px, 0);
+  }
+
+  to {
+    transform: translate(48px, 0);
+  }
+}
